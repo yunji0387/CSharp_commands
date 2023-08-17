@@ -299,6 +299,18 @@ for(int i=0 ; i<inventory2.Length ; i++)
 }
 Console.WriteLine("for inventory sum: " + sum2);
 ```
+
+- do while loop
+```c#
+Random random = new Random();
+int current = 0;
+
+do
+{
+    current = random.Next(1, 11);
+    Console.WriteLine(current);
+} while (current != 7);
+```
  
 <!-- /MarkdownTOC -->
 </details>
