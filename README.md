@@ -235,7 +235,8 @@
 switch (fruit)
 {
     case "apple":
-        Console.WriteLine($"App will display information for apple.");
+    case "grape":
+        Console.WriteLine($"App will display information for apple or grape.");
         break;
 
     case "banana":
@@ -244,6 +245,9 @@ switch (fruit)
 
     case "cherry":
         Console.WriteLine($"App will display information for cherry.");
+        break;
+   default:
+        Console.WriteLine($"App will display information for default.");
         break;
 }
 ```
