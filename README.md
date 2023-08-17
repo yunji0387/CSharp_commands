@@ -1,4 +1,4 @@
-# CSharp_commands
+# C# commands
 
 ## Table of Contents
 1. [How to create, build & run c#](#how_to_run)
@@ -287,6 +287,17 @@ foreach (int items in inventory)
 {
     sum += items;
 }
+```
+
+- for loop
+```c#
+int[] inventory2 = { 200, 450, 700, 175, 250 };
+int sum2 = 0;
+for(int i=0 ; i<inventory2.Length ; i++)
+{
+    sum2 += inventory2[i];
+}
+Console.WriteLine("for inventory sum: " + sum2);
 ```
  
 <!-- /MarkdownTOC -->
