@@ -7,6 +7,8 @@
 4. [string functions](#string_functions)
 5. [Number type functions](#number_functions)
 6. [Expression(boolean)](#expression)
+7. [Array type](#array)
+8. [Random library](#random)
 
 <a id="how_to_run"></a>
 ## How to create, build & run c#
@@ -227,5 +229,42 @@
    Console.WriteLine($"Discount: {discount}"); // Discount: 100
   ```
   
+<!-- /MarkdownTOC -->
+</details>
+
+
+<a id="array"></a>
+## Array type
+<details close>
+<summary><b>(click to expand/hide)</b></summary>
+<!-- MarkdownTOC -->
+
+- int array
+  ```c#
+   int[] array = new int[10];
+  ```
+ 
+<!-- /MarkdownTOC -->
+</details>
+
+<a id="random"></a>
+## Random library
+<details close>
+<summary><b>(click to expand/hide)</b></summary>
+<!-- MarkdownTOC -->
+
+```c#
+Random dice = new Random();
+int roll = dice.Next(1, 7); // limit number from 1 - 6 ( [1, 7) )
+int roll1 = dice.Next(); // limit number from 0 - 2,147,483,647(int max) ( [0, int max) )
+int roll2 = dice.Next(101); // limit number from 0 - 100 ( [0, 101) )
+int roll3 = dice.Next(50, 101); // limit number from 50 - 100 ( [50, 100) )
+
+Console.WriteLine(roll);  // 5
+Console.WriteLine($"First roll: {roll1}"); // 342585470
+Console.WriteLine($"Second roll: {roll2}"); // 43 
+Console.WriteLine($"Third roll: {roll3}"); // 89
+```
+ 
 <!-- /MarkdownTOC -->
 </details>
