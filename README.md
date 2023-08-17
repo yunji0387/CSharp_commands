@@ -8,7 +8,8 @@
 5. [Number type functions](#number_functions)
 6. [Expression(boolean)](#expression)
 7. [Array type](#array)
-8. [Random library](#random)
+8. [Loop](#loop)
+9. [Random library](#random)
 
 <a id="how_to_run"></a>
 ## How to create, build & run c#
@@ -243,7 +244,27 @@
 int[] array = new int[10];
 array[0] = 1;
 array[1] = 10;
+int[] inventory = { 200, 450, 700, 175, 250 };
 string[] fraudulentOrderIDs = new string[3];
+```
+ 
+<!-- /MarkdownTOC -->
+</details>
+
+<a id="loop"></a>
+## Loop
+<details close>
+<summary><b>(click to expand/hide)</b></summary>
+<!-- MarkdownTOC -->
+
+- foreach loop
+```c#
+int[] inventory = { 200, 450, 700, 175, 250 };
+int sum = 0;
+foreach (int items in inventory)
+{
+    sum += items;
+}
 ```
  
 <!-- /MarkdownTOC -->
