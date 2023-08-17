@@ -4,6 +4,7 @@
 1. [Object type](#object_type)
 2. [Console functions](#console_functions)
 3. [string functions](#string_functions)
+4. [Number type functions](#number_functions)
 
 <a id="object_type"></a>
 ## Object type
@@ -25,6 +26,10 @@
 
 <a id="console_functions"></a>
 ## Console functions
+<details close>
+<summary><b>(click to expand/hide)</b></summary>
+<!-- MarkdownTOC -->
+ 
 - console print new line
   ```c#
     Console.WriteLine("Hello World!");
@@ -36,8 +41,15 @@
     Console.Write("Hello World!");
   ```
 
+<!-- /MarkdownTOC -->
+</details>
+
 <a id="string_functions"></a>
 ## string functions
+<details close>
+<summary><b>(click to expand/hide)</b></summary>
+<!-- MarkdownTOC -->
+
 ### escape sequences
 - ```c#
     Console.WriteLine("Hello\nWorld!"); // add new line
@@ -49,6 +61,16 @@
     Console.WriteLine("\u3053\u3093\u306B\u3061\u306F World!"); // unicode escape character
   ```
 
-## Number type
+<!-- /MarkdownTOC -->
+</details>
+
+<a id="number_functions"></a>
+## Number type functions
+<details close>
+<summary><b>(click to expand/hide)</b></summary>
+<!-- MarkdownTOC -->
+   
 ### integer
-- 
+
+<!-- /MarkdownTOC -->
+</details>
