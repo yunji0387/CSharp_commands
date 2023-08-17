@@ -239,10 +239,12 @@
 <summary><b>(click to expand/hide)</b></summary>
 <!-- MarkdownTOC -->
 
-- int array
-  ```c#
-   int[] array = new int[10];
-  ```
+```c#
+int[] array = new int[10];
+array[0] = 1;
+array[1] = 10;
+string[] fraudulentOrderIDs = new string[3];
+```
  
 <!-- /MarkdownTOC -->
 </details>
