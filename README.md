@@ -229,7 +229,25 @@
    int discount = saleAmount > 1000 ? 100 : 50;
    Console.WriteLine($"Discount: {discount}"); // Discount: 100
   ```
-  
+
+### switch statement
+```c#
+switch (fruit)
+{
+    case "apple":
+        Console.WriteLine($"App will display information for apple.");
+        break;
+
+    case "banana":
+        Console.WriteLine($"App will display information for banana.");
+        break;
+
+    case "cherry":
+        Console.WriteLine($"App will display information for cherry.");
+        break;
+}
+```
+
 <!-- /MarkdownTOC -->
 </details>
 
