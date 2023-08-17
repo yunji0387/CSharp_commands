@@ -6,7 +6,7 @@
 3. [Console functions](#console_functions)
 4. [string functions](#string_functions)
 5. [Number type functions](#number_functions)
-6. [Expression](#expression)
+6. [Expression(boolean)](#expression)
 
 <a id="how_to_run"></a>
 ## How to create, build & run c#
@@ -107,6 +107,14 @@
     string projectName = "First-Project";
     Console.WriteLine($@"C:\Output\{projectName}\Data");
   ```
+
+### Contains function
+- check if a string contains a substring
+  ```c#
+   string pangram = "The quick brown fox jumps over the lazy dog.";
+   Console.WriteLine(pangram.Contains("fox")); // True
+   Console.WriteLine(pangram.Contains("cow")); // False
+  ```
 <!-- /MarkdownTOC -->
 </details>
 
@@ -144,7 +152,7 @@
 </details>
 
 <a id="expression"></a>
-## Expression
+## Expression(boolean)
 <details close>
 <summary><b>(click to expand/hide)</b></summary>
 <!-- MarkdownTOC -->
@@ -156,6 +164,22 @@
    Console.WriteLine(1 != 2); // True
    string myValue = "a";
    Console.WriteLine(myValue != "a"); // False
+  ```
+  ```c#
+   Console.WriteLine(1 > 2); // False
+   Console.WriteLine(1 < 2); // True
+   Console.WriteLine(1 >= 1); // True
+   Console.WriteLine(1 <= 1); // True
+  ```
+### Conditional operator
+- ```c#
+   <evaluate this condition> ? <if condition is true, return this value: <if condition is false, return this value>
+  ```
+- example
+  ```c#
+   int saleAmount = 1001;
+   int discount = saleAmount > 1000 ? 100 : 50;
+   Console.WriteLine($"Discount: {discount}");
   ```
   
 <!-- /MarkdownTOC -->
