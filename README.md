@@ -6,6 +6,7 @@
 3. [Console functions](#console_functions)
 4. [string functions](#string_functions)
 5. [Number type functions](#number_functions)
+6. [Expression](#expression)
 
 <a id="how_to_run"></a>
 ## How to create, build & run c#
@@ -138,5 +139,24 @@
   ```c#
     decimal decimalQuotient = 7.0m / 5; // 1.4
   ```
+  
+<!-- /MarkdownTOC -->
+</details>
+
+<a id="expression"></a>
+## Expression
+<details close>
+<summary><b>(click to expand/hide)</b></summary>
+<!-- MarkdownTOC -->
+ 
+- basics
+  ```c#
+   Console.WriteLine("a" != "a"); // False
+   Console.WriteLine("a" != "A"); // True
+   Console.WriteLine(1 != 2); // True
+   string myValue = "a";
+   Console.WriteLine(myValue != "a"); // False
+  ```
+  
 <!-- /MarkdownTOC -->
 </details>
