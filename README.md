@@ -8,6 +8,7 @@
 - bool (1 bit : true/false)
 - char (2 bytes : character/letter)
 - string (2 bytes per character)
+- var (implicitly typed local variable - Must be initialize)
 
 ## Console functions
 - console print new line
@@ -20,6 +21,18 @@
   ```c#
     Console.Write("Hello World!");
   ```
+## string functions
+### escape sequences
+- ```c#
+    Console.WriteLine("Hello\nWorld!"); // add new line
+    Console.WriteLine("Hello\tWorld!"); // add tab
+    Console.WriteLine("Hello \"World\"!"); // add "
+    Console.WriteLine("c:\\source\\repos"); // add \
+    Console.WriteLine(@"    c:\source\repos    
+        (this is where your code goes)"); // @ keep all whitespace and character without need of escape backslash
+    Console.WriteLine("\u3053\u3093\u306B\u3061\u306F World!"); // unicode escape character
+  ```
+
 ## Number type
 ### integer
 - 
