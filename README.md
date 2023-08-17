@@ -78,13 +78,7 @@
    Console.WriteLine($"uint   : {uint.MinValue} to {uint.MaxValue}");
    Console.WriteLine($"ulong  : {ulong.MinValue} to {ulong.MaxValue}");
   ```
-  ```c#
-   Signed integral types:
-   sbyte  : -128 to 127
-   short  : -32768 to 32767
-   int    : -2147483648 to 2147483647
-   long   : -9223372036854775808 to 9223372036854775807
-   
+  ```output
    Unsigned integral types:
    byte   : 0 to 255
    ushort : 0 to 65535
