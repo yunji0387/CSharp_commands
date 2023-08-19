@@ -3,13 +3,14 @@
 ## Table of Contents
 1. [How to create, build & run c#](#how_to_run)
 2. [Object type](#object_type)
-3. [Console functions](#console_functions)
-4. [string functions](#string_functions)
-5. [Number type functions](#number_functions)
-6. [Expression(boolean)](#expression)
-7. [Array type](#array)
-8. [Loop](#loop)
-9. [Random library](#random)
+3. [Type cast](#type_cast)
+4. [Console functions](#console_functions)
+5. [string functions](#string_functions)
+6. [Number type functions](#number_functions)
+7. [Expression(boolean)](#expression)
+8. [Array type](#array)
+9. [Loop](#loop)
+10. [Random library](#random)
 
 <a id="how_to_run"></a>
 ## How to create, build & run c#
@@ -98,6 +99,25 @@
    ushort : 0 to 65535
    uint   : 0 to 4294967295
    ulong  : 0 to 18446744073709551615
+  ```
+
+<!-- /MarkdownTOC -->
+</details>
+
+
+<a id="type_cast"></a>
+## Type cast
+<details close>
+<summary><b>(click to expand/hide)</b></summary>
+<!-- MarkdownTOC -->
+
+- decimal to int
+  ```c#
+   decimal myDecimal = 3.14m;
+   Console.WriteLine($"decimal: {myDecimal}"); // decimal: 3.14
+   
+   int myInt = (int)myDecimal;
+   Console.WriteLine($"int: {myInt}"); // int: 3
   ```
 
 <!-- /MarkdownTOC -->
