@@ -113,12 +113,34 @@
 
 - decimal to int
   ```c#
-   decimal myDecimal = 3.14m;
-   Console.WriteLine($"decimal: {myDecimal}"); // decimal: 3.14
+   int value = (int)1.5m; // casting truncates
+   Console.WriteLine(value); // 1
    
-   int myInt = (int)myDecimal;
-   Console.WriteLine($"int: {myInt}"); // int: 3
+   int value2 = Convert.ToInt32(1.5m); // converting rounds up
+   Console.WriteLine(value2); // 2
   ```
+- number to string
+  ```c#
+   int first = 5;
+   int second = 7;
+   string message = first.ToString() + second.ToString();
+   Console.WriteLine(message);
+  ```
+- string to number
+  ```c#
+   string first = "5";
+   string second = "7";
+   int sum = int.Parse(first) + int.Parse(second);
+   Console.WriteLine(sum);
+  ```
+  or
+  ```c#
+   string value1 = "5";
+   string value2 = "7";
+   int result = Convert.ToInt32(value1) * Convert.ToInt32(value2);
+   Console.WriteLine(result);
+  ```
+  
 
 <!-- /MarkdownTOC -->
 </details>
