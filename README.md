@@ -508,5 +508,39 @@ Console.WriteLine($"Third roll: {roll3}"); // 89
    -- B12
   ```
 
+- ToCharArray()
+  ```c#
+   string value = "abc123";
+   char[] valueArray = value.ToCharArray();
+   Array.Reverse(valueArray);
+   string result = new string(valueArray);
+   Console.WriteLine(result); // 321cbs
+  ```
+
+- Split()
+  ```c#
+   string result = "3,2,1,c,b,a";
+   string[] items = result.Split(',');
+   foreach (string item in items)
+   {
+       Console.WriteLine(item);
+   }
+  ```
+  ```output
+   3
+   2
+   1
+   c
+   b
+   a
+  ```
+
+- Join()
+  ```c#
+   string value = "321cba";
+   string result = String.Join(",", value);
+   Console.WriteLine(result); // 3,2,1,c,b,a
+  ```
+
 <!-- /MarkdownTOC -->
 </details>
