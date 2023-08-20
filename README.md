@@ -15,7 +15,7 @@
 12. [Methods](#methods)
 13. [Debugging](#debugging)
 14. [Exception Handling](#exception_handling)
-15. [List & Collection](#list_collections) (coming soon...)
+15. [List & Collection](#list_collections)
 
 <a id="how_to_run"></a>
 ## How to create, build & run c#
@@ -1030,19 +1030,21 @@ Invalid data. User input values must be non-zero values.
 
 - List & List's built-in methods
   1. List
+     - need to import List library
+     ```c#
+      using System.Collections.Generic;
+     ```
      ```c#
       var names = new List<string> { "<name>", "Scoot", "Kendra" };
      ```
-  2. Add()
+  3. Add()
      ```c#
       names.Add("John");
      ```
-  3. Remove()
+  4. Remove()
      ```c#
       names.Remove("John");
      ```
-- Collections
-  1.  
      
 <!-- /MarkdownTOC -->
 </details>
