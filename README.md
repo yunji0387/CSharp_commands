@@ -691,6 +691,20 @@ Console.WriteLine($"Third roll: {roll3}"); // 89
    RSVP("Noor", 4, inviteOnly: false);
    RSVP("Jonte", 2, "Stone fruit", false);
   ```
-  
+
+### return type methods
+```c#
+double GetDiscountedPrice(int itemIndex)
+{
+    double result = items[itemIndex] * (1 - discounts[itemIndex]);
+    return result;
+}
+
+bool TotalMeetsMinimum()
+{
+    return total >= minimumSpend;
+}
+```
+
 <!-- /MarkdownTOC -->
 </details>
