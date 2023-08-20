@@ -220,6 +220,52 @@
     Console.WriteLine($@"C:\Output\{projectName}\Data");
   ```
 
+### Composite Formatting 
+- composite formatting with index
+  ```c#
+   string first = "Hello";
+   string second = "World";
+   Console.WriteLine("{1} {0}!", first, second); // World Hello!
+   Console.WriteLine("{0} {0} {0}!", first, second); // Hello Hello Hello!
+  ```
+- formatting for currency
+  ```c#
+   decimal price = 123.45m;
+   int discount = 50;
+   Console.WriteLine($"Price: {price:C} (Save {discount:C})"); // Price: $123.45 (Save $50.00)
+  ```
+- formatting for numbers
+   ```c#
+   decimal measurement = 123456.78912m;
+   Console.WriteLine($"Measurement: {measurement:N} units"); // Measurement: 123,456.79 units
+   Console.WriteLine($"Measurement: {measurement:N4} units"); // Measurement: 123,456.7891 units
+   ```
+- formatting for percentages
+  ```c#
+   decimal tax = .36785m;
+   Console.WriteLine($"Tax rate: {tax:P2}"); // Tax rate: 36.79 %
+
+   decimal price = 67.55m;
+   decimal salePrice = 59.99m;
+   string yourDiscount = String.Format("You saved {0:C2} off the regular {1:C2} price. ", (price - salePrice), price);   
+   yourDiscount += $"A discount of {((price - salePrice)/price):P2}!"; //inserted
+   Console.WriteLine(yourDiscount); // You saved $7.56 off the regular $67.55 price. A discount of 11.19%!
+  ```
+### PadLeft() & PadRight()
+```c#
+string input = "Pad this";
+Console.WriteLine(input.PadLeft(12)); // Pad this
+Console.WriteLine(input.PadLeft(12, '-')); // ----Pad this
+Console.WriteLine(input.PadRight(12, '-')); // Pad this----
+```
+
+### overall built-in methods
+- Methods that add blank spaces for formatting purposes (PadLeft(), PadRight())
+- Methods that compare two strings or facilitate comparison (Trim(), TrimStart(), TrimEnd(), GetHashcode(), the Length property)
+- Methods that help you determine what's inside of a string, or even retrieve just a part of the string (Contains(), StartsWith(), EndsWith(), Substring())
+- Methods that change the content of the string by replacing, inserting, or removing parts (Replace(), Insert(), Remove())
+- Methods that turn a string into an array of strings or characters (Split(), ToCharArray())
+  
 ### Contains function
 - check if a string contains a substring
   ```c#
