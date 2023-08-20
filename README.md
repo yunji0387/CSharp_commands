@@ -12,6 +12,7 @@
 9. [Loop](#loop)
 10. [Random library](#random)
 11. [Array operations](#array_operations)
+12. [Methods](#methods)
 
 <a id="how_to_run"></a>
 ## How to create, build & run c#
@@ -446,6 +447,7 @@ array[0] = 1;
 array[1] = 10;
 int[] inventory = { 200, 450, 700, 175, 250 };
 string[] fraudulentOrderIDs = new string[3];
+string [,] array2D = new array[3][6]; //declare 2d array
 ```
  
 <!-- /MarkdownTOC -->
@@ -656,5 +658,39 @@ Console.WriteLine($"Third roll: {roll3}"); // 89
    Console.WriteLine(result); // 3,2,1,c,b,a
   ```
 
+<!-- /MarkdownTOC -->
+</details>
+
+<a id="methods"></a>
+## Methods
+<details close>
+<summary><b>(click to expand/hide)</b></summary>
+<!-- MarkdownTOC -->
+
+### void methods
+  ```c#
+   CountTo(5);
+   void CountTo(int max) 
+   {
+       for (int i = 0; i < max; i++)
+       {
+           Console.Write($"${i}, ");
+       }
+   }
+  ```
+  using "return" in void method will terminate the execution of the void method
+
+### optional parameters
+- set a default value for the parameter to make it optional
+  ```c#
+   void RSVP(string name, int partySize = 1, string allergies = "none", bool inviteOnly = true){ ... }
+   RSVP("Rebecca"); // partySize = 1 , allergies = "none" , inviteOnly = true
+   RSVP("Nadia", 2, "Nuts"); // inviteOnly = true
+   RSVP(name: "Linh", partySize: 2, inviteOnly: false);
+   RSVP("Tony", allergies: "Jackfruit", inviteOnly: true);
+   RSVP("Noor", 4, inviteOnly: false);
+   RSVP("Jonte", 2, "Stone fruit", false);
+  ```
+  
 <!-- /MarkdownTOC -->
 </details>
