@@ -259,6 +259,74 @@ Console.WriteLine(input.PadLeft(12, '-')); // ----Pad this
 Console.WriteLine(input.PadRight(12, '-')); // Pad this----
 ```
 
+### IndexOf() & Substring()
+- IndexOf() gives you the first position of a character or string inside of another string.
+- IndexOf() returns -1 if it can't find a match.
+- Substring() returns just the specified portion of a string, using a starting position and optional length.
+  ```c#
+   string message = "Find what is (inside the parentheses)";
+   int openingPosition = message.IndexOf('(');
+   int closingPosition = message.IndexOf(')');   
+   Console.WriteLine(openingPosition); // 13
+   Console.WriteLine(closingPosition); // 36
+   int length = closingPosition - openingPosition;
+   Console.WriteLine(message.Substring(openingPosition, length)); // (inside the parentheses
+  ```
+### IndexOfAny() & LastIndexOf()
+- Retrieve the last occurrence of a sub string
+  ```c#
+   string message = "(What if) I am (only interested) in the last (set of parentheses)?";
+   int openingPosition = message.LastIndexOf('('); 
+   openingPosition += 1;
+   int closingPosition = message.LastIndexOf(')');
+   int length = closingPosition - openingPosition;
+   Console.WriteLine(message.Substring(openingPosition, length)); // set of parentheses
+  ```
+- Retrieve all instances of substrings inside parentheses
+  ```c#
+   string message = "(What if) there are (more than) one (set of parentheses)?";
+   while (true)
+   {
+       int openingPosition = message.IndexOf('(');
+       if (openingPosition == -1) break;
+   
+       openingPosition += 1;
+       int closingPosition = message.IndexOf(')');
+       int length = closingPosition - openingPosition;
+       Console.WriteLine(message.Substring(openingPosition, length));
+   
+       // Note the overload of the Substring to return only the remaining 
+       // unprocessed message:
+       message = message.Substring(closingPosition + 1);
+   }
+  ```
+- IndexOfAny()
+  ```c#
+   string message = "Help (find) the {opening symbols}";
+   Console.WriteLine($"Searching THIS Message: {message}"); // Searching THIS message: Help (find) the {opening symbols}
+   char[] openSymbols = { '[', '{', '(' };
+   int startPosition = 6;
+   int openingPosition = message.IndexOfAny(openSymbols);
+   Console.WriteLine($"Found WITHOUT using startPosition: {message.Substring(openingPosition)}"); // Found WITHOUT using startPosition: (find) the {opening symbols}
+   openingPosition = message.IndexOfAny(openSymbols, startPosition);
+   Console.WriteLine($"Found WITH using startPosition: {message.Substring(openingPosition)}"); // Found WITH using startPosition 6: {opening symbols}
+  ```
+
+### Remove() & Replace()
+- Remove()
+  ```c#
+   string data = "12345John Smith          5000  3  ";
+   string updatedData = data.Remove(5, 20);
+   Console.WriteLine(updatedData); // 123455000  3
+  ```
+- Replace()
+  ```c#
+   string message = "This--is--ex-amp-le--da-ta";
+   message = message.Replace("--", " ");
+   message = message.Replace("-", "");
+   Console.WriteLine(message); // This is example data
+  ```
+
 ### overall built-in methods
 - Methods that add blank spaces for formatting purposes (PadLeft(), PadRight())
 - Methods that compare two strings or facilitate comparison (Trim(), TrimStart(), TrimEnd(), GetHashcode(), the Length property)
