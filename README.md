@@ -11,6 +11,7 @@
 8. [Array type](#array)
 9. [Loop](#loop)
 10. [Random library](#random)
+11. [Array operations](#array_operations)
 
 <a id="how_to_run"></a>
 ## How to create, build & run c#
@@ -397,5 +398,115 @@ Console.WriteLine($"Second roll: {roll2}"); // 43
 Console.WriteLine($"Third roll: {roll3}"); // 89
 ```
  
+<!-- /MarkdownTOC -->
+</details>
+
+<a id="array_operations"></a>
+## Array operations
+<details close>
+<summary><b>(click to expand/hide)</b></summary>
+<!-- MarkdownTOC -->
+
+- Sort()
+  ```c#
+   string[] pallets = { "B14", "A11", "B12", "A13" };
+   Console.WriteLine("Sorted...");
+   Array.Sort(pallets);
+   foreach (var pallet in pallets)
+   {
+       Console.WriteLine($"-- {pallet}");
+   }
+  ```
+  ```output
+   Sorted...
+   -- A11
+   -- A13
+   -- B12
+   -- B14
+  ```
+  
+- Reverse()
+  ```c#
+   string[] pallets = { "B14", "A11", "B12", "A13" };
+   Console.WriteLine("Reversed...");
+   Array.Reverse(pallets);
+   foreach (var pallet in pallets)
+   {
+       Console.WriteLine($"-- {pallet}");
+   }
+  ```
+  ```output
+   Reversed...
+   -- B14
+   -- B12
+   -- A13
+   -- A11
+  ```
+
+- Clear() with specific range
+  ```c#
+   string[] pallets = { "B14", "A11", "B12", "A13" };
+   Console.WriteLine($"Before: {pallets[0]}");
+   Array.Clear(pallets, 0, 2);
+   Console.WriteLine($"After: {pallets[0]}");
+   
+   Console.WriteLine($"Clearing 2 ... count: {pallets.Length}");
+   foreach (var pallet in pallets)
+   {
+       Console.WriteLine($"-- {pallet}");
+   }
+  ```
+  ```output
+   Before: B14
+   After:
+   Clearing 2 ... count: 4
+   --
+   --
+   -- B12
+   -- A13
+  ```
+
+- Resize()
+  ```c#
+   string[] pallets = { "B14", "A11", "B12", "A13" };
+   Array.Resize(ref pallets, 6);
+   Console.WriteLine($"Resizing 6 ... count: {pallets.Length}");
+   
+   pallets[4] = "C01";
+   pallets[5] = "C02";
+   
+   foreach (var pallet in pallets)
+   {
+       Console.WriteLine($"-- {pallet}");
+   }
+  ```
+  ```output
+   Resizing 6 ... count: 6
+   -- B14
+   -- A11
+   -- B12
+   -- A13
+   -- C01
+   -- C02
+  ```
+
+- Resize() to remove elements
+  ```c#
+   string[] pallets = { "B14", "A11", "B12", "A13" };
+   Array.Resize(ref pallets, 3);
+   Console.WriteLine($"Resizing 3 ... count: {pallets.Length}");
+   
+   foreach (var pallet in pallets)
+   {
+       Console.WriteLine($"-- {pallet}");
+   }
+  ```
+  ```output
+   Resizing 3 ... count: 3
+   --
+   --
+   -- B12
+  ```
+
 <!-- /MarkdownTOC -->
 </details>
