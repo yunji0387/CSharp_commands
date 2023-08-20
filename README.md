@@ -1060,17 +1060,37 @@ Invalid data. User input values must be non-zero values.
   ```c#
    using System;
 
-   namespace MyBank
-   {
-      class Program
+   namespace MySuperBank
+  {
+      public class BankAccount
       {
-         static void Main(string[] args)
-         {
-            Console.WriteLine("Hello World!");
-         }
+          public string Number { get; }
+          public string Owner { get; set; }
+          public decimal Balance { get; }
+
+          public BankAccount(string name, decimal initialBalance)
+          {
+             this.Owner = name;
+             this.Balance = initialBalance;
+          }
+      
+          public void MakeDeposit(decimal amount, DateTime date, string note)
+          {
+          }
+      
+          public void MakeWithdrawal(decimal amount, DateTime date, string note)
+          {
+          }
       }
-   }
+  }
+  ```
+  ```c#
+   using Classes;
+  
+   var account = new BankAccount("<name>", 1000);
+   Console.WriteLine($"Account {account.Number} was created for {account.Owner} with {account.Balance} initial balance.");
   ```
 
+  
 <!-- /MarkdownTOC -->
 </details>
