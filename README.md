@@ -13,6 +13,7 @@
 10. [Random library](#random)
 11. [Array operations](#array_operations)
 12. [Methods](#methods)
+13. [Debugging](#debugging)
 
 <a id="how_to_run"></a>
 ## How to create, build & run c#
@@ -705,6 +706,17 @@ bool TotalMeetsMinimum()
     return total >= minimumSpend;
 }
 ```
+
+<!-- /MarkdownTOC -->
+</details>
+
+<a id="debugging"></a>
+## Debugging
+<details close>
+<summary><b>(click to expand/hide)</b></summary>
+<!-- MarkdownTOC -->
+
+### [More detail tutorial in this link](https://learn.microsoft.com/en-us/training/modules/implement-visual-studio-code-debugging-tools/2-examine-visual-studio-code-debugger)
 
 <!-- /MarkdownTOC -->
 </details>
