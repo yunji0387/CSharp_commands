@@ -126,7 +126,7 @@
    string message = first.ToString() + second.ToString();
    Console.WriteLine(message);
   ```
-- string to number
+- string to int
   ```c#
    string first = "5";
    string second = "7";
@@ -140,7 +140,28 @@
    int result = Convert.ToInt32(value1) * Convert.ToInt32(value2);
    Console.WriteLine(result);
   ```
-  
+- string to decimal
+  ```c#
+   string first = "5.69";
+   int convertFirst = Convert.ToDecimal(first);
+   Console.WriteLine(convertFirst);
+  ```
+- TryParse(<var1>, out <var2>)
+  ```c#
+   string value = "bad";
+   int result = 0;
+   if (int.TryParse(value, out result))
+   {
+       Console.WriteLine($"Measurement: {result}");
+   }
+   else
+   {
+       Console.WriteLine("Unable to report the measurement.");
+   }
+   
+   if (result > 0)
+       Console.WriteLine($"Measurement (w/ offset): {50 + result}");
+  ```
 
 <!-- /MarkdownTOC -->
 </details>
