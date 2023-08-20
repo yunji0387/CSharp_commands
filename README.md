@@ -1021,3 +1021,28 @@ Invalid data. User input values must be non-zero values.
 
 <!-- /MarkdownTOC -->
 </details>
+
+<a id="list_collections"></a>
+## List & Collections
+<details close>
+<summary><b>(click to expand/hide)</b></summary>
+<!-- MarkdownTOC -->
+
+- List & List's built-in methods
+  1. List
+     ```c#
+      var names = new List<string> { "<name>", "Scoot", "Kendra" };
+     ```
+  2. Add()
+     ```c#
+      names.Add("John");
+     ```
+  3. Remove()
+     ```c#
+      names.Remove("John");
+     ```
+- Collections
+  1.  
+     
+<!-- /MarkdownTOC -->
+</details>
