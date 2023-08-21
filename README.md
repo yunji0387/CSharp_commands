@@ -17,6 +17,7 @@
 14. [Exception Handling](#exception_handling)
 15. [List & Collection](#list_collections)
 16. [Classes & Objects](#classes_objects)
+17. [Sources](#sources)
 
 <a id="how_to_run"></a>
 ## How to create, build & run c#
@@ -1090,7 +1091,18 @@ Invalid data. User input values must be non-zero values.
    var account = new BankAccount("<name>", 1000);
    Console.WriteLine($"Account {account.Number} was created for {account.Owner} with {account.Balance} initial balance.");
   ```
-
   
+<!-- /MarkdownTOC -->
+</details>
+
+<a id="sources"></a>
+## Sources
+<details open>
+<summary><b>(click to expand/hide)</b></summary>
+<!-- MarkdownTOC -->
+   
+- [Microsoft learn tutorial](https://learn.microsoft.com/en-us/training/paths/get-started-c-sharp-part-1/)
+- [c# videos tutorial c#101](https://www.youtube.com/watch?v=BM4CHBmAPh4&list=PLdo4fOcmZ0oVxKLQCHpiUWun7vlJJvUiN&index=1)
+
 <!-- /MarkdownTOC -->
 </details>
